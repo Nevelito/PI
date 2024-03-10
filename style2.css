@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    height: auto; /* 80% wysokości ekranu */
+    margin-top: 40px;
+}
+
+.container_menu {
+    display: flex;
+    height: 50px;
+    margin-bottom: 100px;
+}
+
+.column {
+    flex: 1; /* Każda kolumna zajmuje równą część przestrzeni */
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Uwzględnia szerokość obramowania w szerokości kolumny */
+    text-align: center;
+    padding: 10px;
+}
+
+.column_menu {
+    flex: 1; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+    background-color: rgb(109, 105, 105);
+    transition: border-color 0.3s, background-color 0.3s; /* Dodajemy efekt przejścia */
+}
+
+.column_menu:hover {
+    border-color: blue; /* Zmieniamy kolor obramowania na najechanie myszką */
+    background-color: rgba(109, 105, 105, 0.8); /* Zmieniamy kolor tła na najechanie myszką */
+}
+
+.photo {
+    height: auto;
+    width: 90%;
+    margin-bottom: 30px;
+}

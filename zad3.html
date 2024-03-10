@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="mode_board">
+        <button class="menu_button" onclick="onePlayerEasy()">Gra dla jednego gracza poziom łatwy</button>
+        <button class="menu_button" onclick="onePlayerHard()">Gra dla jednego gracza poziom trudny</button>
+        <button class="menu_button" onclick="twoPlayer()">Gra dla dwóch graczy</button>
+    </div>
+    <div class="container">
+        <div class="game_board">
+            <div class="board">
+                <div class="board_item" onclick="makeMove(0)"></div>
+                <div class="board_item" onclick="makeMove(1)"></div>
+                <div class="board_item" onclick="makeMove(2)"></div>
+                <div class="board_item" onclick="makeMove(3)"></div>
+                <div class="board_item" onclick="makeMove(4)"></div>
+                <div class="board_item" onclick="makeMove(5)"></div>
+                <div class="board_item" onclick="makeMove(6)"></div>
+                <div class="board_item" onclick="makeMove(7)"></div>
+                <div class="board_item" onclick="makeMove(8)"></div>
+            </div>
+        </div>
+        <button class="restart_button" onclick="restartGame()">Zrestartuj grę</button>
+        <button class="menu_button" onclick="changeGameMode()">Zmień tryb gry</button>
+    </div>
+    <div id="resultMessage" class="resultMessage">
+        <p id="resultText"></p>
+        <button class="restart_button" onclick="playAgain()">Zagraj ponownie</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
