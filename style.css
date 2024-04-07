@@ -1,85 +1,190 @@
-body, html {
+
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
+    box-sizing: border-box;
 }
 
-.container{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
-}
 
-.board{
-    display: grid;
-    grid-template-columns: repeat(3,100px);
-    grid-template-rows: repeat(3,100px);
-    grid-gap: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-.board_item{
-    background-color: lightgray;
-    border-radius: 10px;
-    border: 2px solid gray;
-    transition: all 0.1s linear;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.board_item:hover{
-    background-color: gray;
-}
-
-.restart_button{
-    background-color: green;
-    border-radius: 100%;
-    border: 2px solid black;
-    height: 100px;
-    margin-top: 30px;
-    transition: all 0.1s linear;
-    margin-bottom: 40px;
-}
-
-.restart_button:hover{
-    background-color: greenyellow;
-}
-
-.player-x {
-    color: red;
-}
-
-.player-o {
-    color: blue;
-}
-
-.resultMessage {
-    display: none;
-    justify-content: center;
-    align-items: center;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
     text-align: center;
-    font-size: 70px;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
-.menu_button {
-    background-color: aqua;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    width: 50%; 
     border-radius: 10px;
-    border: 3px solid blue;
-    font-size: 30px;
-    color: blue;
-    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.mode_board {
+.sections {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 300px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #666;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.buttons {
+    margin-bottom: 60px;
+    margin-top: 100px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+section ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #666;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 850px) {
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin-right: 10px;
+        margin-bottom: 30px; 
+        flex: 1 0 30%; 
+        max-width: 30%; 
+    }
+
+    section {
+        width: 70%; 
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    body {
+        padding: 10px;
+    }
+ 
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin-right: 30px;
+        margin-bottom: 30px; 
+        flex: 1 0 30%; 
+        max-width: 30%; 
+    }
+
+
+    .container {
+        padding: 0px;
+    }
+
+    section {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin-right: 10px;
+        margin-bottom: 30px; 
+        flex: 1 0 40%; 
+        max-width: 40%; 
+    }
+    
+
+    .container {
+        padding: 0px;
+    }
+
+    section {
+        width: 100%; 
+    }
 }
