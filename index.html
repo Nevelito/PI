@@ -5,135 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szymon Newel</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="cookie-consent" class="cookie-consent">
+        Ta strona używa plików cookies. <button onclick="acceptCookies()" class="cookie-button">Akceptuję</button>
+    </div>
+    <div class="language-switcher">
+        <button id="theme-toggle" class="btn btn-light">Tryb ciemny/jasny</button>
+        <a href="#" data-lang="pl" class="btn btn-light">PL</a> 
+        <a href="#" data-lang="en" class="btn btn-light">EN</a>
+    </div>
 
     <div class="container">
-        <div class="profile-pic">
-            <img src="Zdjecie_profilowe.jpeg" alt="Moje Zdjęcie">
+        <div class="profile-pic text-center">
+            <img src="Zdjecie_profilowe.jpeg" alt="Moje Zdjęcie" class="rounded-circle">
         </div>
-        <div class="info">
-            <h1>Szymon Newel</h1>
-            <p>Ruby Developer | Ruby on Rails Fullstack</p>
+        <div class="info text-center">
+            <h1 data-i18n="name">Szymon Newel</h1>
+            <p data-i18n="role">Ruby Developer | Ruby on Rails Fullstack</p>
         </div>
         <div class="buttons">
             <nav>
-                <ul>
-                    <li><a href="#about" class="btn">O mnie</a></li>
-                    <li><a href="#education" class="btn">Edukacja</a></li>
-                    <li><a href="#languages" class="btn">Języki</a></li>
-                    <li><a href="#experience" class="btn">Doświadczenie</a></li>
-                    <li><a href="#cv" class="btn">CV</a></li>
-                    <li><a href="#contact" class="btn">Kontakt</a></li>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a href="#about" class="btn btn-light nav-link" data-i18n="about">O mnie</a></li>
+                    <li class="nav-item"><a href="#education" class="btn btn-light nav-link" data-i18n="education">Edukacja</a></li>
+                    <li class="nav-item"><a href="#languages" class="btn btn-light nav-link" data-i18n="languages">Języki</a></li>
+                    <li class="nav-item"><a href="#experience" class="btn btn-light nav-link" data-i18n="experience">Doświadczenie</a></li>
+                    <li class="nav-item"><a href="#cv" class="btn btn-light nav-link" data-i18n="cv">CV</a></li>
+                    <li class="nav-item"><a href="#contact" class="btn btn-light nav-link" data-i18n="contact">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
-    <div class="sections">
-        <section id="about">
-            <div class="container">
-                <div class="content">
-                    <h2>Cześć, mam na imie Szymon</h2>
-                    <p>Jestem osobą odważną i nieobojętną na ryzyko, gdy chodzi o osiąganie swoich celów i marzeń. W pracy dążę do zdobywania doświadczenia oraz poznawania nowych, wartościowych ludzi, którzy mogą wprowadzić mnie na ścieżkę sukcesu zawodowego. Sumiennie pracuję nad własnym rozwojem, samodzielnie zgłębiam nowe języki programowania oraz technologie. Aktualnie pracuję jako Deweloper Ruby i koncentruję się na rozwijaniu umiejętności w tworzeniu stron internetowych przy użyciu frameworka Ruby on Rails. Moje podejście do nauki potwierdza uzyskanie stypendium rektora za osiągnięcia akademickie, które należą do jednych z najlepszych w moim roku studiów.</p>
-                </div>
+    <div class="sections container">
+        <section id="about" class="light-section">
+            <div class="content">
+                <h2 data-i18n="aboutTitle">Cześć, mam na imie Szymon</h2>
+                <p data-i18n="aboutText">Jestem osobą odważną i nieobojętną na ryzyko, gdy chodzi o osiąganie swoich celów i marzeń. W pracy dążę do zdobywania doświadczenia oraz poznawania nowych, wartościowych ludzi, którzy mogą wprowadzić mnie na ścieżkę sukcesu zawodowego. Sumiennie pracuję nad własnym rozwojem, samodzielnie zgłębiam nowe języki programowania oraz technologie. Aktualnie pracuję jako Deweloper Ruby i koncentruję się na rozwijaniu umiejętności w tworzeniu stron internetowych przy użyciu frameworka Ruby on Rails. Moje podejście do nauki potwierdza uzyskanie stypendium rektora za osiągnięcia akademickie, które należą do jednych z najlepszych w moim roku studiów.</p>
             </div>
         </section>
 
-        <section id="education">
-            <div class="container">
-                <h2>Edukacja</h2>
-                <ul>
-                    <li>
-                        <h3>Okres: 10.2021 - teraz</h3>
-                        <p>Kierunek: informatyka</p>
-                        <p>Nazwa szkoły: Szkoła Główna Gospodarstwa Wiejskiego w Warszawie</p>
-                        <p>Poziom: inżynier</p>
-                    </li>
-                    <li>
-                        <h3>Okres: 09.2018 - 04.2021</h3>
-                        <p>Nazwa szkoły: VI Liceum Ogólnokształcące im. Króla Zygmunta Augusta w Białymstoku</p>
-                        <p>Poziom: średnie</p>
-                    </li>
-                    <li>
-                        <h3>Okres: 09.2009 - 06.2018</h3>
-                        <p>Nazwa szkoły: Zespół Szkół nr 2 im. Adama Mickiewicza w Białymstoku</p>
-                        <p>Poziom: podstawowe</p>
-                    </li>
-                </ul>
-            </div>
+        <div class="heading"><h2 data-i18n="educationTitle">Edukacja</h2></div>
+        <section id="education" class="light-section">
+            <ul>
+                <li>
+                    <h3 data-i18n="educationPeriod1">Okres: 10.2021 - teraz</h3>
+                    <p data-i18n="educationMajor1">Kierunek: informatyka</p>
+                    <p data-i18n="educationSchool1">Nazwa szkoły: Szkoła Główna Gospodarstwa Wiejskiego w Warszawie</p>
+                    <p data-i18n="educationLevel1">Poziom: inżynier</p>
+                </li>
+                <li>
+                    <h3 data-i18n="educationPeriod2">Okres: 09.2018 - 04.2021</h3>
+                    <p data-i18n="educationSchool2">Nazwa szkoły: VI Liceum Ogólnokształcące im. Króla Zygmunta Augusta w Białymstoku</p>
+                    <p data-i18n="educationLevel2">Poziom: średnie</p>
+                </li>
+                <li>
+                    <h3 data-i18n="educationPeriod3">Okres: 09.2009 - 06.2018</h3>
+                    <p data-i18n="educationSchool3">Nazwa szkoły: Zespół Szkół nr 2 im. Adama Mickiewicza w Białymstoku</p>
+                    <p data-i18n="educationLevel3">Poziom: podstawowe</p>
+                </li>
+            </ul>
         </section>
         
-        <section id="languages">
-            <div class="container">
-                <h2>Języki</h2>
-                <ul>
-                    <li>
-                        <h3>polski: ojczysty</h3>
-                    </li>
-                    <li>
-                        <h3>angielski: zaawansowany</h3>
-                    </li>
-                    <li>
-                        <h3>rosyjski: podtsawowy</h3>
-                    </li>
-                </ul>
-            </div>
+        <div class="heading"><h2 data-i18n="languagesTitle">Języki</h2></div>
+        <section id="languages" class="light-section">
+            <ul>
+                <li><h3 data-i18n="language1">polski: ojczysty</h3></li>
+                <li><h3 data-i18n="language2">angielski: zaawansowany</h3></li>
+                <li><h3 data-i18n="language3">rosyjski: podstawowy</h3></li>
+            </ul>
         </section>
         
-        <section id="experience">
-            <div class="container">
-                <h2>Doświadczenie</h2>
-                <ul>
-                    <li>
-                        <h3>Junior Ruby Developer</h3>
-                        <p>2N IT</p>
-                        <p>06.2023 - teraz</p>
-                        <p>Programowanie aplikacji webowych przy pomocy frameworka Ruby on Rails</p>
-                    </li>
-                    <li>
-                        <h3>Nauczyciel</h3>
-                        <p>Giganci Programowania</p>
-                        <p>01.2023 - 06.2023</p>
-                        <p>Korepetycje z programowania dla dzieci i młodzieży</p>
-                    </li>
-                </ul>
-            </div>
+        <div class="heading"><h2 data-i18n="experienceTitle">Doświadczenie</h2></div>
+        <section id="experience" class="light-section">
+            <ul>
+                <li>
+                    <h3 data-i18n="jobTitle1">Junior Ruby Developer</h3>
+                    <p data-i18n="jobCompany1">2N IT</p>
+                    <p data-i18n="jobPeriod1">06.2023 - teraz</p>
+                    <p data-i18n="jobDescription1">Programowanie aplikacji webowych przy pomocy frameworka Ruby on Rails</p>
+                </li>
+                <li>
+                    <h3 data-i18n="jobTitle2">Nauczyciel</h3>
+                    <p data-i18n="jobCompany2">Giganci Programowania</p>
+                    <p data-i18n="jobPeriod2">01.2023 - 06.2023</p>
+                    <p data-i18n="jobDescription2">Korepetycje z programowania dla dzieci i młodzieży</p>
+                </li>
+            </ul>
+        </section>
+        <div class="heading"><h2 data-i18n="cvTitle">CV</h2></div>
+        <section id="cv" class="light-cv-section">
+            <a href="Szymon_Newel_CV1.pdf" target="_blank" class="btn btn-light" data-i18n="cvDownload">Pobierz CV</a>
         </section>
         
-        <section id="cv">
-            <div class="container">
-                <h2>CV</h2>
-                <a href="Szymon_Newel_CV1.pdf" target="_blank" class="btn">Pobierz CV</a>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <div class="container">
-                <h2>Kontakt</h2>
-                <ul>
-                    <li>
-                        <h3>Email</h3>
-                        <p>szymonnewel@gmail.com</p>
-                    </li>
-                    <li>
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/Nevelito" target="_blank">Link do GitHub</a>
-                    </li>
-                    <li>
-                        <h3>Linkedin</h3>
-                        <a href="https://www.linkedin.com/in/szymon-newel-0a055a258/?originalSubdomain=pl" target="_blank">Link do Linkedin</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="heading"><h2 data-i18n="contactTitle">Kontakt</h2></div>
+        <section id="contact" class="light-contact-section">
+            <ul class="horizontal-layout">
+                <li>
+                    <h3 data-i18n="contactEmail">Email</h3>
+                    <p>szymonnewel@gmail.com</p>
+                </li>
+                <li>
+                    <h3 data-i18n="contactGithub">GitHub</h3>
+                    <a href="https://github.com/Nevelito" target="_blank">Link do GitHub</a>
+                </li>
+                <li>
+                    <h3 data-i18n="contactLinkedin">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/szymon-newel-0a055a258/?originalSubdomain=pl" target="_blank">Link do LinkedIn</a>
+                </li>
+            </ul>
         </section>
     </div>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Mój Profil. Wszelkie prawa zastrzeżone.</p>
-    </div>
-</footer>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mój Profil. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
 </body>
 </html>
